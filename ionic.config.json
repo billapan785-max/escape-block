@@ -1,0 +1,7 @@
+{
+  "name": "Escape Block",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

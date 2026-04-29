@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Neon Slide Puzzle</title>
+    <script>
+      // Prevent formdata-polyfill from trying to overwrite fetch in restricted environments
+      if (typeof window !== 'undefined' && window.FormData && !window.FormData.prototype.keys) {
+        window.FormData.prototype.keys = function*() {
+          console.warn("Shimmed FormData.prototype.keys to prevent fetch errors");
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
